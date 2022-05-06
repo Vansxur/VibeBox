@@ -1,0 +1,65 @@
+#calculette-code{
+    position: relative;
+    margin: auto;
+}
+
+#output{
+    background: #5d5c54;
+    border-radius: 1.2rem;
+    padding: 10px;
+    text-align: right;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+button {
+    padding: 10px;
+    height: 45px;
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-size: 20px;
+    border-radius: 1.2rem;
+    border: 3px solid transparent;
+}
+
+.calc-btn{
+    width: 67px;
+}
+
+
+button:hover{
+    border: 3px solid #eccd00;
+}
+
+.page-content-calculette{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+h1{
+    padding-top:  20px;
+}
+
+#sidebar-content-page{
+    align-items: center;
+}
+
+
+/* icons */
+.icons-home{
+    width: 25px;
+    height: 25px;
+    background: grey;
+    border: 3px solid grey;
+}
+
+
+.icons-home:hover{
+    background: #525151;
+    border: 3px solid  #525151;
+}
+/* end icons */
