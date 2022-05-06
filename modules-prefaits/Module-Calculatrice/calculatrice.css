@@ -36,6 +36,7 @@ button:hover{
     display: flex;
     align-items:center;
     justify-content: center;
+    margin: auto;
     height: 100vh;
     flex-direction: column;
 }

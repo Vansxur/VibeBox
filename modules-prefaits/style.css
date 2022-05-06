@@ -12,11 +12,12 @@
     display: none;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     text-decoration: none;
 }
+
 body{
     background: var(--background-color);
     color: var(--white);
