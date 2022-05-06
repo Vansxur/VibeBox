@@ -5,6 +5,23 @@
   color: white;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #45454C;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #45454C;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500&display=swap');
 
 .bg_primary {
@@ -30,14 +47,31 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  overflow-y:hidden;
 }
+
+.applications {
+  width: 120px;
+  overflow-y: hidden;
+
+
+}
+
+.applications:hover {
+  overflow-y: scroll;
+}
+
+
 
 .icon {
   height: 80px;
   width: 80px;
-  border-radius: 25px;
+  border-radius: 20px;
   margin: inherit;
   display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 20px;
 }
 
 .icon_home_div {
@@ -54,6 +88,10 @@
 
 .icon_random_div {
   background-color: #EC0067;
+}
+
+.icon_trello_div {
+  background-color: #EC8700;
 }
 
 .logo {
