@@ -1,0 +1,15 @@
+.container-fluid{
+  justify-content: center;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.jumbotron {
+  background: transparent;
+  border: 1px solid white;
+  .btn-outline-secondary{
+    background: rgba(210, 209, 209, 0.58);
+    color: #333334;
+  }
+}
