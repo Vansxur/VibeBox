@@ -1,0 +1,86 @@
+<mat-toolbar class="mat-elevation-z8">
+  <button mat-icon-button
+    *ngIf="sidenav.mode === 'over'"
+    (click)="sidenav.toggle()">
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
+  VibeBox
+</mat-toolbar>
+
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+    <div class="maindiv bg_primary">
+      <div class="menu bg_secondary">
+        <div class="applications">
+
+          <a class="icon icon_home_div" routerLink="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 68.191 53.028" class="logo  ">
+              <path id="Icon_awesome-home" data-name="Icon awesome-home" d="M33.191,16.01,11.365,33.986v19.4a1.894,1.894,0,0,0,1.894,1.894l13.266-.034a1.894,1.894,0,0,0,1.885-1.894V42.023A1.894,1.894,0,0,1,30.3,40.129H37.88a1.894,1.894,0,0,1,1.894,1.894V53.345a1.894,1.894,0,0,0,1.894,1.9l13.261.037a1.894,1.894,0,0,0,1.894-1.894V33.973L35,16.01A1.443,1.443,0,0,0,33.191,16.01ZM67.666,28.228l-9.9-8.157V3.674a1.421,1.421,0,0,0-1.421-1.421H49.72A1.421,1.421,0,0,0,48.3,3.674v8.6L37.7,3.55a5.682,5.682,0,0,0-7.221,0L.514,28.228a1.421,1.421,0,0,0-.189,2L3.344,33.9a1.421,1.421,0,0,0,2,.193L33.191,11.157a1.443,1.443,0,0,1,1.811,0L62.848,34.091a1.421,1.421,0,0,0,2-.189l3.019-3.67a1.421,1.421,0,0,0-.2-2Z" transform="translate(0.001 -2.254)" fill="#fff"/>
+            </svg>
+          </a>
+
+
+          <a class="icon icon_note_div" routerLink="show-notes">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 45 66" class="logo">
+              <text id="NO" transform="translate(0 30)" fill="#fff" font-size="29" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="0">NO</tspan></text>
+              <text id="TE_" data-name="TE," transform="translate(1 56)" fill="#fff" font-size="29" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="0">TE,</tspan></text>
+            </svg>
+          </a>
+
+          <a class="icon icon_calculator_div" routerLink="calculator">
+            <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 44.605 50.977" class="logo">
+              <g id="Groupe_12" data-name="Groupe 12" transform="translate(-110.697 -911.523)">
+                <path id="Icon_awesome-calculator" data-name="Icon awesome-calculator" d="M39.826,0H4.779A4.9,4.9,0,0,0,0,4.779V46.2a4.9,4.9,0,0,0,4.779,4.779H39.826A4.9,4.9,0,0,0,44.605,46.2V4.779A4.9,4.9,0,0,0,39.826,0ZM12.744,43.331a1.371,1.371,0,0,1-1.274,1.274H7.647a1.371,1.371,0,0,1-1.274-1.274V39.507a1.371,1.371,0,0,1,1.274-1.274H11.47a1.371,1.371,0,0,1,1.274,1.274Zm0-12.744a1.371,1.371,0,0,1-1.274,1.274H7.647a1.371,1.371,0,0,1-1.274-1.274V26.763a1.371,1.371,0,0,1,1.274-1.274H11.47a1.371,1.371,0,0,1,1.274,1.274ZM25.489,43.331a1.371,1.371,0,0,1-1.274,1.274H20.391a1.371,1.371,0,0,1-1.274-1.274V39.507a1.371,1.371,0,0,1,1.274-1.274h3.823a1.371,1.371,0,0,1,1.274,1.274Zm0-12.744a1.371,1.371,0,0,1-1.274,1.274H20.391a1.371,1.371,0,0,1-1.274-1.274V26.763a1.371,1.371,0,0,1,1.274-1.274h3.823a1.371,1.371,0,0,1,1.274,1.274ZM38.233,43.331a1.371,1.371,0,0,1-1.274,1.274H33.135a1.371,1.371,0,0,1-1.274-1.274V26.763a1.371,1.371,0,0,1,1.274-1.274h3.823a1.371,1.371,0,0,1,1.274,1.274Zm0-25.489a1.371,1.371,0,0,1-1.274,1.274H7.647a1.371,1.371,0,0,1-1.274-1.274V7.647A1.371,1.371,0,0,1,7.647,6.372H36.959a1.371,1.371,0,0,1,1.274,1.274Z" transform="translate(110.697 911.523)" fill="#fff"/>
+              </g>
+            </svg>
+          </a>
+
+          <a class="icon icon_random_div" routerLink="random-generator">
+            <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 52.847 44.875" class="logo">
+              <path id="Icon_awesome-random" data-name="Icon awesome-random" d="M52.122,35.008a2.354,2.354,0,0,1,0,3.4l-8.257,8.012a2.489,2.489,0,0,1-4.229-1.7v-4H33.568a1.257,1.257,0,0,1-.905-.382L25.38,32.76l5.5-5.724L36.332,32.7h3.3v-4A2.489,2.489,0,0,1,43.864,27l8.257,8.011ZM1.239,16.674h8.67l5.448,5.665,5.5-5.724L13.579,9.043a1.256,1.256,0,0,0-.906-.382H1.239A1.221,1.221,0,0,0,0,9.863v5.609A1.221,1.221,0,0,0,1.239,16.674Zm38.4,0v4.005a2.489,2.489,0,0,0,4.229,1.7l8.257-8.012a2.354,2.354,0,0,0,0-3.4L43.864,2.956a2.489,2.489,0,0,0-4.229,1.7v4H33.568a1.257,1.257,0,0,0-.905.382L9.909,32.7H1.239A1.221,1.221,0,0,0,0,33.9v5.609a1.221,1.221,0,0,0,1.239,1.2H12.674a1.257,1.257,0,0,0,.906-.382L36.332,16.674Z" transform="translate(0 -2.25)" fill="#fff"/>
+            </svg>
+          </a>
+
+          <a class="icon icon_meteo_div" routerLink="weather">
+            <svg xmlns="http://www.w3.org/2000/svg" width="57.637" height="40.346" viewBox="0 0 57.637 40.346" class="logo">
+              <path id="Icon_awesome-cloud" data-name="Icon awesome-cloud" d="M48.415,19.775A8.656,8.656,0,0,0,40.346,8.014a8.6,8.6,0,0,0-4.8,1.459,14.41,14.41,0,0,0-26.9,7.187c0,.243.009.486.018.729a12.972,12.972,0,0,0,4.3,25.207H46.11a11.527,11.527,0,0,0,2.305-22.821Z" transform="translate(0 -2.25)" fill="#fff"/>
+            </svg>
+          </a>
+
+          <a class="icon icon_ide_div" routerLink="ide">
+            <svg xmlns="http://www.w3.org/2000/svg" width="55.235" height="49.098" viewBox="0 0 55.235 49.098" class="logo">
+              <path id="Icon_material-web-asset" data-name="Icon material-web-asset" d="M53.6,6H10.637A6.136,6.136,0,0,0,4.5,12.137V48.96A6.136,6.136,0,0,0,10.637,55.1H53.6a6.155,6.155,0,0,0,6.137-6.137V12.137A6.136,6.136,0,0,0,53.6,6Zm0,42.96H10.637V18.274H53.6Z" transform="translate(-4.5 -6)" fill="#fff"/>
+            </svg>
+          </a>
+
+          <a class="icon icon_agenda_div" routerLink="agenda">
+            <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="38.707" height="47.662" viewBox="0 0 38.707 47.662">
+              <path id="Icon_simple-codeigniter" data-name="Icon simple-codeigniter" d="M15.762,47.656a9.114,9.114,0,0,1-5.407-7.594A10.722,10.722,0,0,1,15.22,31.63a3.875,3.875,0,0,0,.3,3.515A3.228,3.228,0,0,0,18.8,36.428a3.37,3.37,0,0,0,2.335-4.154,3.41,3.41,0,0,0-1.025-1.624,7.465,7.465,0,0,1-2.681-6.823,7,7,0,0,1,2.176-3.545c-.8,2.145,1.464,4.262,2.987,5.3a79.088,79.088,0,0,1,7.792,5.334,10.5,10.5,0,0,1,3.972,8.936,9.9,9.9,0,0,1-6.722,7.8c7.05-1.569,14.318-7.169,14.457-15.112A16.459,16.459,0,0,0,32.366,17.89h-.258a2.357,2.357,0,0,1,.179.985,3.612,3.612,0,0,0,0-.655,3.158,3.158,0,0,1,0,.774,3.371,3.371,0,0,1-5.91,1.307c-2.323-2.979,0-6.369.389-9.645A12.255,12.255,0,0,0,21.694.012c1.7,2.834-.564,6.553-2.21,8.67s-4.031,3.694-5.973,5.54A48.658,48.658,0,0,0,7.777,20.6,19.418,19.418,0,0,0,3.805,36.891,15.5,15.5,0,0,0,15.75,47.674h.032Z" transform="translate(-3.389 -0.012)" fill="#fff"/>
+            </svg>
+          </a>
+
+          <a class="icon icon_trello_div" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="37.525" height="37.988" viewBox="0 0 45.525 45.988" class="logo">
+              <path id="Icon_awesome-trello" data-name="Icon awesome-trello" d="M39.871,2.25H5.7A5.726,5.726,0,0,0,0,8c-.01,0,0-.411,0,34.491a5.724,5.724,0,0,0,5.691,5.749H39.861a5.724,5.724,0,0,0,5.661-5.749V8A5.709,5.709,0,0,0,39.871,2.25ZM20.023,37.08a2.748,2.748,0,0,1-2.734,2.731h-8.4A2.737,2.737,0,0,1,6.14,37.08V10.986A2.749,2.749,0,0,1,8.874,8.224H17.3a2.749,2.749,0,0,1,2.734,2.761V37.08Zm19.625-11.5a2.749,2.749,0,0,1-2.734,2.761H28.682a2.749,2.749,0,0,1-2.734-2.761V11a2.747,2.747,0,0,1,2.724-2.761h8.242A2.749,2.749,0,0,1,39.648,11V25.583Z" transform="translate(0.003 -2.25)" fill="#fff"/>
+            </svg>
+          </a>
+
+          <a class="icon icon_trello_div" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="37.525" height="37.988" viewBox="0 0 45.525 45.988" class="logo">
+              <path id="Icon_awesome-trello" data-name="Icon awesome-trello" d="M39.871,2.25H5.7A5.726,5.726,0,0,0,0,8c-.01,0,0-.411,0,34.491a5.724,5.724,0,0,0,5.691,5.749H39.861a5.724,5.724,0,0,0,5.661-5.749V8A5.709,5.709,0,0,0,39.871,2.25ZM20.023,37.08a2.748,2.748,0,0,1-2.734,2.731h-8.4A2.737,2.737,0,0,1,6.14,37.08V10.986A2.749,2.749,0,0,1,8.874,8.224H17.3a2.749,2.749,0,0,1,2.734,2.761V37.08Zm19.625-11.5a2.749,2.749,0,0,1-2.734,2.761H28.682a2.749,2.749,0,0,1-2.734-2.761V11a2.747,2.747,0,0,1,2.724-2.761h8.242A2.749,2.749,0,0,1,39.648,11V25.583Z" transform="translate(0.003 -2.25)" fill="#fff"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
