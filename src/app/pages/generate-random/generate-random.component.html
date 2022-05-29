@@ -1,0 +1,39 @@
+
+
+<div id="sidebar-content-page">
+  <div class="page-content">
+    <h1>VibeBox Generateur</h1>
+    <!--Sidebar-->
+    <div id="pseudo-button-choice">
+      <div class="btn">
+        <button class="generate-button" id="man-pseudo" (click)="gen_man_pseudo()"> Générez un pseudo d'homme</button>
+        <input class="input-generate" type="text" id="man-pseudo-affichage">
+      </div>
+      <div class="btn">
+        <button class="generate-button" id="woman-pseudo" (click)="gen_woman_pseudo()">Générez un pseudo de Femme</button>
+        <input class="input-generate" type="text" id="woman-pseudo-affichage">
+
+      </div>
+      <div class="btn">
+        <button class="generate-button" id="gamer-pseudo" (click)="gen_gamer_pseudo()"> Générez un pseudo de gamer</button>
+        <input class="input-generate" type="text" id="gamer-pseudo-affichage">
+      </div>
+    </div>
+
+    <div class="main-color">
+      <div class="color-div">
+        <div class="color"  id="all-colors" (click)="allColor()">
+        </div>
+        <div class="color" id="nice-colors" (click)="niceColors()">
+        </div>
+
+        <div class="color" id="colors3" (click)="colorsThree()">
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </div>
+</div>

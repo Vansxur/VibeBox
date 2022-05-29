@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+
+<form class="container">
+
+  <!-- Grid -->
+  <div class="grid">
+
+    <!-- Markup example 1: input is inside label -->
+    <label for="Adress">
+      Address
+      <input type="text" id="address" name="address" placeholder="Adress" value="192.168.0.1" minlength="7" maxlength="15" size="15" pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5]).){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$" required>
+    </label>
+
+    <label for="lastname">
+      Mask
+      <input type="number" id="mask" name="mask" placeholder="Mask" value="24" required>
+    </label>
+
+  </div>
+
+  <!-- Button -->
+  <button type="button" name="button" (click)="check()">Check</button>
+  <small class="erroraddress">There's a problem with adress</small>
+  <small class="errormask">There's a problem with mask</small>
+
+
+  <details class="result" open>
+    <summary role="button" class="secondary">Result</summary>
+    <ul>
+      <li>Subnet : <span id="subnet"></span></li>
+      <li>Number of address : <span id="nofaddress"></span></li>
+      <li>First address : <span id="firstaddress"></span></li>
+      <li>Last address : <span id="lastaddress"></span></li>
+    </ul>
+  </details>
+
+
+</form>

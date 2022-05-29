@@ -1,0 +1,13 @@
+
+<h1>Add new note here !</h1>
+
+<div class="form-container">
+  <form (submit)="addNote()" (ngSubmit)="saveData(registerForm)" #registerForm="ngForm">
+    <textarea type="text" [(ngModel)]="newNotes.note" name="note" placeholder="Take your note" id="note"></textarea>
+    <button type="submit"> Add note</button>
+  </form>
+</div>
+
+<div>
+  <button (click)="showNotes()">Show your notes</button>
+</div>

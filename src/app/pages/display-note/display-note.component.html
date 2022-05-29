@@ -1,0 +1,16 @@
+<h1>There is your note</h1>
+<div>
+  <button (click)="newNote()" class="add-note">+</button>
+</div>
+<div class="cards-container">
+  <div *ngFor="let note of notes">
+    <div class="cards">
+      <div class="cards-content">
+        {{note.note}}
+          <button (click)="removeNote(note.note)">X</button>
+      </div>
+    </div>
+  </div>
+</div>
+<button (click)="removeAllNotes()" *ngIf="notes.length > 0" class="btn-delete">Delete All</button>
+

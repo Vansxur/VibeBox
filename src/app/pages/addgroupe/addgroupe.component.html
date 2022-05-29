@@ -1,0 +1,13 @@
+<h1>Add the person on your group</h1>
+<div class="container">
+  <div class="form-container">
+    <form (submit)="addUser()" (ngSubmit)="saveData(registerForm)" #registerForm="ngForm">
+      <input type="text" [(ngModel)]="newUsers.username" name="user" placeholder="Enter username" id="user">
+      <button type="submit"> + user</button>
+    </form>
+  </div>
+
+    <button (click)="showWork()">Dashboard</button>
+
+</div>
+

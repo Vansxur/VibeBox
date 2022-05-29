@@ -1,0 +1,27 @@
+.form-container{
+  justify-content: center;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  button{
+    border: none;
+    &:hover{
+      border: none;
+      background: transparent;
+      color: rgba(218, 179, 103, 0.63);
+    }
+  }
+}
+
+.container{
+  height: 80%;
+  display: flex;
+}
+
+input, select{
+  height: 25px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid;
+  border-radius: 8px;
+  color: white;
+}

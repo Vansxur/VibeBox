@@ -1,0 +1,49 @@
+
+<h1>Dashboard</h1>
+<div class="container">
+  <div class="cards-container">
+    <div *ngFor="let users of users">
+      <div class="cards">
+        <div class="cards-content">
+          {{users.username}}
+            <a (click)="removeUser(users.username)">X</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-form-container">
+    <form (submit)="addProject()" (ngSubmit)="saveDataProject(registerForm)" #registerForm="ngForm">
+      <input type="text" [(ngModel)]="newProject.projectName" name="project" placeholder="Enter project name" id="project">
+      <button type="submit">+ Project</button>
+    </form>
+  </div>
+</div>
+<div class="project-grid">
+  <div *ngFor="let projects of projects"  class="project-card">
+
+    <p>{{projects.projectName | uppercase}}
+      <a (click)="removeProject(projects.projectName)">X</a>
+    </p>
+    <div class="pick-user">
+      <div *ngFor="let users of users">
+        <select name="pets" id="select">
+          <option value=""></option>
+          <option value="users">{{users.username}}</option>
+        </select>
+      </div>
+    </div>
+    <form (submit)="addList()" (ngSubmit)="saveDataList(registerForm)" #registerForm="ngForm">
+      <input type="text" [(ngModel)]="newList.listName" name="list" placeholder="Enter List name" id="list">
+      <button type="submit">+ Task</button>
+    </form>
+
+      <div *ngFor="let lists of lists" class="list">
+          {{lists.listName}}
+          <a (click)="removeList(lists.listName)">X</a>
+      </div>
+
+  </div>
+
+
+</div>

@@ -1,0 +1,139 @@
+.cards-container{
+  background: rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  padding: 10px;
+  border-radius: 15px;
+}
+a{
+  cursor: pointer;
+}
+
+button{
+  padding: 0;
+  margin: 0;
+  &:hover{
+    color: rgba(218, 179, 103, 0.63);
+  }
+}
+
+.project-form-container{
+  display: flex;
+  float: right;
+  form{
+    input{
+      width: 50%;
+    }
+  }
+}
+
+.project-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.project-card{
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px;
+  p{
+    justify-content: center;
+  }
+  button{
+    border: none;
+    margin-left: 5px;
+    &:hover{
+      background: transparent;
+    }
+  }
+}
+a{
+  color: #860606;
+  margin-left: 3px;
+  &:hover{
+    color: #ff0000;
+  }
+}
+
+.pick-user{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  select{
+    margin: 15px;
+  }
+}
+
+
+input, select{
+  width: 70%;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid;
+  border-radius: 8px;
+  color: white;
+}
+
+select{
+  color: #53da0e !important;
+}
+
+.container{
+  margin-bottom: 20px;
+  button{
+    border: none;
+    margin-left: 3px;
+    &:hover{
+      background: transparent;
+    }
+  }
+}
+
+
+.list{
+    background: rgba(0,0,0,0.3);
+    margin: 10px 0;
+    border-radius: 6px;
+  a{
+    float: right;
+    margin-right: 15px;
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .project-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 900px) {
+  .project-grid{
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+  .project-form-container{
+    display: flex;
+    width: 50%;
+    form{
+      input{
+        width: 100%;
+      }
+      button{
+        border: none;
+        &:hover{
+          background: transparent;
+        }
+      }
+    }
+  }
+  .container{
+    display: flex;
+    justify-content: space-between;
+  }
+}

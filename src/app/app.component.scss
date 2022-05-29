@@ -1,0 +1,166 @@
+::-webkit-scrollbar{
+  display: none;
+}
+
+mat-toolbar {
+  background: #e7560d;
+  color: white;
+  overflow: hidden;
+}
+
+mat-sidenav {
+  margin: 16px;
+  width: 200px;
+  border-right: none;
+  background: #e7560d;
+  color: white;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.content {
+  height: calc(100vh - 130px);
+  border-radius: 10px;
+  margin: 16px;
+  margin-left: 32px;
+  padding: 16px;
+  overflow: auto;
+  background-color: #363431;
+  color: white;
+}
+
+mat-sidenav-container {
+  height: calc(100vh - 65px);
+}
+
+.menu-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1rem;
+
+  mat-icon {
+    margin-right: 8px;
+  }
+}
+
+
+.name {
+  margin-top: 8px;
+  font-weight: normal;
+}
+
+.designation {
+  margin-top: 2px;
+  font-size: 0.7rem;
+  color: lightgrey;
+}
+
+
+
+.bg_secondary {
+  background-color: #19191A;
+}
+
+.maindiv {
+  display: flex;
+}
+
+.menu {
+  height: 80vh;
+  width: 120px;
+  margin-top: 2.5vh;
+  margin-left: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y:hidden;
+}
+
+.applications {
+  width: 120px;
+  overflow-y: hidden;
+}
+
+.applications:hover {
+  overflow-y: scroll;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #45454C;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #45454C;
+}
+
+
+
+
+
+
+
+.icon {
+  height: 80px;
+  width: 80px;
+  border-radius: 20px;
+  margin: inherit;
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+}
+
+.active{
+  border: 2px solid white;
+}
+
+.icon_home_div {
+  background-color: #888888;
+}
+
+.icon_note_div {
+  background-color: #ECCD00;
+}
+
+.icon_calculator_div {
+  background-color: #8E76FF;
+}
+
+.icon_random_div {
+  background-color: #EC0067;
+}
+
+.icon_trello_div {
+  background-color: #EC8700;
+}
+
+.icon_meteo_div {
+  background-color: #00ecc9;
+}
+
+.icon_ide_div {
+  background-color: #1232dc;
+}
+
+.icon_agenda_div{
+  background-color: #74dc12;
+
+}
+
+.logo {
+  margin: auto;
+}
