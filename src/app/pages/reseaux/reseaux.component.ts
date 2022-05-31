@@ -96,9 +96,6 @@ export class ReseauxComponent implements OnInit {
         document.getElementById("firstaddress").textContent="" + block1 + "." + block2 + "." + block3 + "." + "1";
         // @ts-ignore
         document.getElementById("lastaddress").textContent="" + block1 + "." + block2 + "." + block3 + "." + "255";
-
-
-
       }
     }
   }

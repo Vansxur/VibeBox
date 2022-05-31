@@ -32,6 +32,7 @@ import {
 import { AddgroupeComponent } from './pages/addgroupe/addgroupe.component';
 import {WorkGestComponent} from './pages/work-gest/work-gest.component';
 import { ReseauxComponent } from './pages/reseaux/reseaux.component';
+import { PasswordComponent } from './pages/password/password.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { ReseauxComponent } from './pages/reseaux/reseaux.component';
     AgendaComponent,
     AddgroupeComponent,
     WorkGestComponent,
-    ReseauxComponent
+    ReseauxComponent,
+    PasswordComponent
   ],
   imports: [
     BrowserModule,

@@ -12,6 +12,7 @@ import {WorkGestComponent} from './pages/work-gest/work-gest.component';
 import {AddgroupeComponent} from './pages/addgroupe/addgroupe.component';
 import {ReseauxComponent} from './pages/reseaux/reseaux.component';
 import {HomeComponent} from './pages/home/home.component';
+import {PasswordComponent} from './pages/password/password.component';
 
 
 const routes: Routes = [
@@ -60,6 +61,10 @@ const routes: Routes = [
   {
     path: 'Masque',
     component: ReseauxComponent,
+  },
+  {
+    path: 'Password',
+    component: PasswordComponent,
   },
   {
     path: '**',

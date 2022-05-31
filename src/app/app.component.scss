@@ -164,3 +164,28 @@ mat-sidenav-container {
 .logo {
   margin: auto;
 }
+
+.btn-color{
+  margin-left: 80%;
+}
+
+button{
+  border-radius: 6px;
+  margin-right:  5px;
+}
+#btn-red{
+  background-color: #ff00cc;
+  box-shadow: rgba(0,0,0,0.3);
+}
+#btn-blue{
+  background-color: #00ffff;
+  box-shadow: rgba(0,0,0,0.3);
+}
+#btn-green{
+  background-color: #15ad15;
+  box-shadow: rgba(0,0,0,0.3);
+}
+#btn-orange{
+  background-color: #e7560d;
+  box-shadow: rgba(0,0,0,0.3);
+}
