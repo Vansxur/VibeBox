@@ -1,51 +1,69 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import * as ace from 'ace-builds';
 
-let code!: any;
-let script!: any;
+
 
 @Component({
   selector: 'app-ide',
   templateUrl: './ide.component.html',
   styleUrls: ['./ide.component.scss']
 })
-export class IdeComponent implements OnInit {
-
-  @ViewChild('editor') private editor: ElementRef<HTMLElement> | any;
-
-
-  constructor() {
-  }
+export class IdeComponent implements OnInit, AfterViewInit {
+  constructor() { }
 
 
   // 4️⃣
-  ngAfterViewInit(): void {
-    ace.config.set('fontSize', '14px');
-    ace.config.set('basePath', 'https://unpkg.com/ace-builds@1.4.12/src-noconflict');
+  ngAfterViewInit(): any {
 
-    const aceEditor = ace.edit(this.editor.nativeElement);
-    aceEditor.session.setValue('//VibeBox ide');
+    const executeCodeBtn: any = document.querySelector('.editor__run');
+    const resetCodeBtn: any = document.querySelector('.editor__reset');
+    let consoleExec: any = document.getElementById('console');
 
-    aceEditor.setTheme('ace/theme/twilight');
-    aceEditor.session.setMode('ace/mode/html');
+// Setup Ace
+    const codeEditor = ace.edit('editorCode');
+    const defaultCode = 'console.log("Hello World!");';
 
-    aceEditor.on('change', () => {
-      console.log(aceEditor.getValue());
+    const editorLib = {
+      init(): any {
+        // Configure Ace
+
+        // Theme
+        codeEditor.setTheme('ace/theme/dreamweaver');
+
+        // Set language
+        codeEditor.session.setMode('ace/mode/javascript');
+
+        // Set Options
+        codeEditor.setOptions({
+          fontFamily: 'Inconsolata',
+          fontSize: '12pt',
+          enableBasicAutocompletion: true,
+          enableLiveAutocompletion: true,
+        });
+
+        // Set Default Code
+        codeEditor.setValue(defaultCode);
+      }
+    };
+// Events
+    executeCodeBtn.addEventListener('click', () => {
+      // Get input from the code editor
+      const userCode = codeEditor.getValue();
+      // Run the user code
+      try {
+        new Function(userCode)();
+      } catch (err) {
+        console.error(err);
+      }
     });
+    resetCodeBtn.addEventListener('click', () => {
+      // Clear ace editor
+      codeEditor.setValue(defaultCode);
+    });
+    // editorLib.init();
   }
 
   ngOnInit(): void {
   }
 
-  onRun() {
-    script = document.getElementById('script');
-    try {
-      script.appendChild(document.createTextNode(code));
-      document.body.appendChild(script);
-    } catch (e) {
-      script.text = code;
-      document.body.appendChild(script);
-    }
-    console.log(code);
-  }
 }
