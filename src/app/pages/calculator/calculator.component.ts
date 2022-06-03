@@ -74,7 +74,7 @@ export class CalculatorComponent implements OnInit {
   // tslint:disable-next-line:typedef
   clear() {
     if (this.input !== '') {
-      this.input = this.input.substr(0, this.input.length - 1)
+      this.input = this.input.substr(0, this.input.length - 1);
     }
   }
 

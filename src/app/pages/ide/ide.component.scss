@@ -48,8 +48,8 @@
 }
 
 .editor__console {
-  background-color: #ffffff;
-  color: black;
+  background-color: #484848;
+  color: #ffffff;
   width: 100%;
   height: 130px;
   margin-top: .9em;
@@ -66,4 +66,9 @@
   left: 0;
   right: 0;
   border: 1px solid var(--editor-border);
+}
+
+
+.form-control{
+  margin: 0 0 10px 0;
 }

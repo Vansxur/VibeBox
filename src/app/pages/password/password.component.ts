@@ -7,11 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PasswordComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
+    const recent = document.querySelector('.recentpassword') as HTMLElement;
+    recent.style.display = "block";
+    // @ts-ignore
+    document.getElementById("passwordrecent").textContent="" + localStorage.getItem('password');
   }
+
   check(): void {
+    const recent = document.querySelector('.recentpassword') as HTMLElement;
+    recent.style.display = "none";
+
     const error = document.querySelector('.error') as HTMLElement;
     error.style.display = "none";
 
@@ -20,7 +29,7 @@ export class PasswordComponent implements OnInit {
 
     // @ts-ignore
     const inputPassword = document.getElementById('password').value as HTMLInputElement;
-    var inputPasswordStr = inputPassword.toString();
+    let inputPasswordStr = inputPassword.toString();
 
     if ( inputPasswordStr == "" ) {
       error.style.display = "block";
@@ -28,10 +37,18 @@ export class PasswordComponent implements OnInit {
       result.style.display = "block";
       // @ts-ignore
       document.getElementById("passwordresult").textContent="" + btoa(inputPasswordStr);
+      localStorage.setItem('password', btoa(inputPasswordStr));
+      // @ts-ignore
+      document.getElementById("passwordrecent").textContent="" + localStorage.getItem('password');
+
     }
   }
 
   generate(): void {
+
+    const recent = document.querySelector('.recentpassword') as HTMLElement;
+    recent.style.display = "none";
+
     const result = document.querySelector('.result') as HTMLElement;
     result.style.display = "none";
 
@@ -42,8 +59,13 @@ export class PasswordComponent implements OnInit {
 
     result.style.display = "block";
     // @ts-ignore
-    document.getElementById("passwordresult").textContent = "" + randomstring;
+    document.getElementById("passwordresult").textContent="" + randomstring;
+    localStorage.setItem('password', randomstring);
+    // @ts-ignore
+    document.getElementById("passwordrecent").textContent="" + localStorage.getItem('password');
+
   }
+
 
   copyInputMessage(): void {
     // @ts-ignore
@@ -53,4 +75,6 @@ export class PasswordComponent implements OnInit {
       navigator.clipboard.writeText(texttocopyStr).then().catch(e => console.error(e));
     }
   }
+
+
 }

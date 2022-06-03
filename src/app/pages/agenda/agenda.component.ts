@@ -3,7 +3,7 @@ import {EventSettingsModel, View} from '@syncfusion/ej2-angular-schedule';
 
 @Component({
   selector: 'app-agenda',
-  template: '<ejs-schedule [currentView]="setView" ></ejs-schedule>',
+  template: '<ejs-schedule></ejs-schedule>',
   // templateUrl: './agenda.component.html',
   styleUrls: ['./agenda.component.scss']
 })
